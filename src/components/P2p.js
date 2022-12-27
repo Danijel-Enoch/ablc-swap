@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from "./assets/Logo.png";
 import llight from "./images/logo-full-white.png";
 import bnb from "./assets/bnb.png";
@@ -25,8 +25,37 @@ import Particle from "react-particles-js";
 import { BUDDY } from "ci-info";
 import "./bybarter/assets/css/site/site.min.css";
 import "./bybarter/assets/fontawesome/css/all.min.css";
-
+import { createPair } from '../sdk/p2p';
 export default function P2p() {
+    const [tokeA, setTokenA] = useState("0x557a09f2a257e7ea0C9EdD45F4ABc1F5Eca05dfF");
+    const [tokenB, setTokenB] = useState("0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56");
+    const [baseAmount, setBaseAmount] = useState();
+    const [quoteAmount, setQuoteAmount] = useState();
+    const [mode, setMode] = useState("Buy");
+
+    const Buy = async () => {
+        await createPair("buy", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
+            .then((res) => console.log({ res }))
+            .catch((err) => console.log({ err }))
+    }
+    const Sell = async () => {
+        await createPair("buy", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
+            .then((res) => console.log({ res }))
+            .catch((err) => console.log({ err }))
+    }
+    const TransactOrder = async () => {
+        if (tokeA || tokenB || baseAmount || quoteAmount) {
+            console.log({ tokeA, tokenB, baseAmount, quoteAmount })
+            if (mode === "Buy") {
+                await Buy()
+            } else {
+                await Sell()
+            }
+        } else {
+            alert("INVALID INPUT VALUES")
+        }
+    }
+
     return (
         <>
             <div className="token-info token-info-s1" >
@@ -36,20 +65,21 @@ export default function P2p() {
                             <p className="buytext">Base Token</p>
                             <p className="btcamount">1ABLC =0.04 USD</p>
                             <div className="selin">
-                                <input className="secin" placeholder="Enter Quantity" />
-                                <select name="" id="list2" >
-                                    <option value="">ABLC<img className="logodesign" src={logo} /></option>
+                                <input onChange={(e) => setBaseAmount(e.target.value)} className="secin" placeholder="Enter Quantity" />
+                                <select onChange={(e) => setTokenA(e.target.value)} name="" id="list2" >
+                                    <option value="0x557a09f2a257e7ea0C9EdD45F4ABc1F5Eca05dfF">ABLC<img className="logodesign" src={logo} /></option>
                                 </select>
                             </div>
-                            {/* <span className="spandiv"><input className="inputdiv"  placeholder="Amount$"></input></span> */}
-
                             <p className="buytext">Quote Token</p>
                             <p className="btcamount usd">≅0 USD</p>
                             <div className="selin">
-                                <input className="secin" placeholder="Enter Quantity" />
-                                <select name="" id="list2" >
-                                    <option value="">BUSD <img src={busd} /></option>
-                                    <option value="">BNB<img src={bnb} /></option>
+                                <input onChange={(e) => setQuoteAmount(e.target.value)} className="secin" placeholder="Enter Quantity" />
+                                <select onChange={(e) => {
+                                    setTokenB(e.target.value)
+                                    console.log(e.target.value)
+                                }} name="" id="list2" >
+                                    <option value="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56">BUSD <img src={busd} /></option>
+                                    <option value="0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c">BNB<img src={bnb} /></option>
                                 </select>
                             </div>
                         </div>
@@ -59,10 +89,16 @@ export default function P2p() {
                     </div>
                 </div>
                 <div className='pdb mg-btn'>
-                    <button style={{
+                    <button onClick={() => {
+                        setMode("buy")
+                        TransactOrder()
+                    }} style={{
                         marginRight: 10
                     }} className="btns"  >BUY ORDER</button>
-                    <button style={{
+                    <button onClick={() => {
+                        setMode("buy")
+                        TransactOrder()
+                    }} style={{
                         marginRight: 5
                     }} className="btns">SELL ORDER</button>
                 </div>

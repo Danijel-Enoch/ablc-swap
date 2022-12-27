@@ -36,19 +36,6 @@ import abi from "./abi.json"
 import RouterAbi from "../sdk/abis/router.json"
 import { getAccount } from '@wagmi/core'
 
-async function SwapTokens(amountIn, amountOutMin, path) {
-
-
-
-    return {
-        isLoading,
-        isError,
-        isSuccess,
-        write, error
-    }
-
-
-}
 export default function Swapper() {
     const [showSell, setShowSell] = React.useState(false)
     const [amounts, setAmounts] = React.useState([1, 0.04])
@@ -86,24 +73,6 @@ export default function Swapper() {
             }
         }
     }
-
-    async function swapExactTokensForTokens(amountIn, amountOutMin, path, to, deadline) {
-        const address = "0x10ed43c718714eb63d5aa57b78b54704e256024e";
-        const abi = [
-            "function swapExactTokensForTokens(uint256 amountIn, uint256 amountOutMin, address[] path, address to, uint256 deadline) returns (uint256[] amounts)"
-        ];
-        const provider = new ethers.providers.Web3Provider(window.ethereum)
-        await provider.send('eth_requestAccounts', []);
-        const signer = provider.getSigner()
-        const contract = new ethers.Contract(address, abi, signer);
-        const tx = await contract.functions.swapExactTokensForTokens(amountIn, amountOutMin, path, to, deadline);
-
-        const receipt = await tx.wait();
-        console.log("receipt", receipt);
-    }
-
-
-
 
 
     const {
@@ -220,7 +189,7 @@ export default function Swapper() {
                         await SwapperMain(PancakeRouter, toUse.path[0], toUse.path[1], ABLCToTokenAmount, toUse.amountOutMin)
                     }
                     if (showSell === false) {
-                        alert("Buy")
+                        alert("Pair Contract Does not Exist")
                     }
                 }} className="bn29 " id="styledbtn">Swap</button>
             </div>

@@ -54,3 +54,32 @@ td button.sell {
     background-color: orangered;
     border: 2px solid orangered;
 }
+
+span.title {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    table {
+        background-color: transparent;
+    }
+    
+    table thead{
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 2em;
+        background-color: #333;
+    }
+
+    span.title {
+        display: block;
+        color: gold;
+    }
+}
