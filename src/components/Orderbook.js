@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./assets/css/orderbook.css"
 import "./assets/css/theme.css";
 import "./assets/css/rtl.css";
@@ -25,6 +25,7 @@ import { busd, ablc } from '../sdk/swap'
 import axios from 'axios'
 import { Exchange } from '../sdk/p2p'
 import truncateEthAddress from 'truncate-eth-address'
+import { ethers } from 'ethers';
 
 export default function Orderbook() {
     const [table, setTable] = useState()
@@ -55,7 +56,9 @@ export default function Orderbook() {
                 <td> <span className='title'>Base</span> {Base}</td>
                 <td> <span className='title'>Quote</span> {quote}</td>
                 <td> <span className='title'>TX</span> <button onClick={() => {
-                    Exchange(walletAddress, Oid, tokenB, quote).then((res) => {
+                    const converted = (parseFloat(quote) * 1000000000000000000).toString()
+                    console.log(TxId)
+                    Exchange(walletAddress, Oid, tokenB, converted).then((res) => {
                         updateOrder(TxId)
                         alert("Tx Successful")
                     }).catch((err) => {
@@ -127,16 +130,18 @@ export default function Orderbook() {
                 {!table ? <>NO Trade yet</> : <tbody>
                     {
                         table.map((el, i) => {
-                            console.log({ id: el.id, Oid: el.Oid, i })
-                            if (el.orderType === "sell") {
-                                return <>
-                                    {
-                                        sell(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)
-                                    }
-                                </>
-                            }
-                            else {
-                                return <>{buy(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)}</>
+                            if (el.tx === "false") {
+                                console.log({ id: el.id, Oid: el.Oid, i })
+                                if (el.orderType === "sell") {
+                                    return <>
+                                        {
+                                            sell(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)
+                                        }
+                                    </>
+                                }
+                                else {
+                                    return <>{buy(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)}</>
+                                }
                             }
 
                         })
@@ -167,54 +172,5 @@ export default function Orderbook() {
 // // tokenB: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"
 
 
-import React, { useEffect, useState } from 'react'
-// import logo from "./assets/Logo.png";
-// import llight from "./images/logo-full-white.png";
-// import bnb from "./assets/bnb.png";
-// import busd from "./assets/busd.png";
-// import secure from "./images/secure1.png"
-// import "./assets/css/theme.css";
-// import "./assets/css/rtl.css";
-// import "./assets/css/style-azalea.css";
-// import "./assets/css/style-dark.css";
-// import "./assets/css/style-jasmine.css";
-// import "./assets/css/style-lavender.css";
-// import "./assets/css/style-lobelia.css";
-// import "./assets/css/style-lungwort.css";
-// import "./assets/css/style-muscari.css";
-// import "./assets/css/style-salvia.css";
-// import "./assets/css/style-zinnia.css";
-// import "./assets/css/style.css";
-// import "./assets/css/vendor.bundle.bs4.css";
-// import "./assets/css/vendor.bundle.css";
-// import "../assets/about.css";
-// import particlesConfig from "../assets/particlesConfig.json";
-// import Particle from "react-particles-js";
-// import { BUDDY } from "ci-info";
-// import "./bybarter/assets/css/site/site.min.css";
-// import "./bybarter/assets/fontawesome/css/all.min.css";
-// import { ethers } from 'ethers';
-// import { getAmountsOut, converter, getAmountsOutAblc, ablc, approve, PancakeRouter, SwapperMain } from '../sdk/swap';
-// import {
-//     usePrepareContractWrite,
-//     useContractWrite,
-//     useWaitForTransaction,
-// } from 'wagmi'
-// import { useAccount } from 'wagmi'
-// import abi from "./abi.json"
-// import RouterAbi from "../sdk/abis/router.json"
-// import { getAccount } from '@wagmi/core'
-
-// export default function Orderbook() {
 
 
-
-//     return (
-//         <div >
-//             <div>
-//                 <br />
-//                 <button onClick={() => alert("ashdak")} className="bn29 " id="styledbtn">Swap</button>
-//             </div>
-//         </div>
-//     )
-// }

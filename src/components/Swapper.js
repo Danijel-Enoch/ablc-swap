@@ -59,7 +59,7 @@ export default function Swapper() {
         const outAmounts = await getAmountsOutAblc(amountToBuy)
         let path = []
         if (token === "busd") {
-            path = [ablc, "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"]
+            path = [ablc, "0x55d398326f99059fF775485246999027B3197955"]
             return {
                 amountOutMin: outAmounts.amountsBusd[1],
                 path
@@ -170,23 +170,19 @@ export default function Swapper() {
                 </div>
             </div>
             <div>
-                <button onClick={() => {
-                    if (buyAmountsIn) {
-                        write?.()
-                    } else {
-                        alert("INVALID INPUT")
-                    }
-
-                }} className="bn29 " id="styledbtn">{isLoading ? 'Approving' : isSuccess ? "Approved" : "Approve"}</button>
                 <br />
                 <br />
                 <button onClick={async () => {
-                    if (showSell === true) {
-                        let nowInMs = Date.now();
-                        let nowInSecond = Math.round(nowInMs / 1000);
-                        const toUse = await sellAmountsOut(ABLCToTokenAmount, ABLCToToken);
-                        console.log({ ABLCToTokenAmount, a: toUse.amountOutMin, p: toUse.path, address, d: (nowInSecond + 12000).toString() })
-                        await SwapperMain(PancakeRouter, toUse.path[0], toUse.path[1], ABLCToTokenAmount, toUse.amountOutMin)
+                    if (ABLCToTokenAmount) {
+                        if (showSell === true) {
+                            let nowInMs = Date.now();
+                            let nowInSecond = Math.round(nowInMs / 1000);
+                            const toUse = await sellAmountsOut(ABLCToTokenAmount.toString() + "00000000", ABLCToToken);
+                            console.log({ ABLCToTokenAmount, a: toUse.amountOutMin, p: toUse.path, address, d: (nowInSecond + 12000).toString() })
+                            await SwapperMain(PancakeRouter, toUse.path[0], toUse.path[1], ABLCToTokenAmount.toString() + "00000000", toUse.amountOutMin)
+                        }
+                    } else {
+                        alert("INVALID INPUT")
                     }
                     if (showSell === false) {
                         alert("Pair Contract Does not Exist")

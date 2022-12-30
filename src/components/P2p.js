@@ -31,7 +31,7 @@ export default function P2p() {
     const [tokenB, setTokenB] = useState("0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56");
     const [baseAmount, setBaseAmount] = useState();
     const [quoteAmount, setQuoteAmount] = useState();
-    const [mode, setMode] = useState("Buy");
+    const [mode, setMode] = useState("buy");
 
     const Buy = async () => {
         await createPair("buy", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
@@ -39,14 +39,14 @@ export default function P2p() {
             .catch((err) => console.log({ err }))
     }
     const Sell = async () => {
-        await createPair("buy", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
+        await createPair("sell", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
             .then((res) => console.log({ res }))
             .catch((err) => console.log({ err }))
     }
     const TransactOrder = async () => {
         if (tokeA || tokenB || baseAmount || quoteAmount) {
             console.log({ tokeA, tokenB, baseAmount, quoteAmount })
-            if (mode === "Buy") {
+            if (mode === "buy") {
                 await Buy()
             } else {
                 await Sell()
@@ -96,7 +96,7 @@ export default function P2p() {
                         marginRight: 10
                     }} className="btns"  >BUY ORDER</button>
                     <button onClick={() => {
-                        setMode("buy")
+                        setMode("sell")
                         TransactOrder()
                     }} style={{
                         marginRight: 5
