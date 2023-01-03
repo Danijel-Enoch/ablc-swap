@@ -29,6 +29,7 @@ import { ethers } from 'ethers';
 
 export default function Orderbook() {
     const [table, setTable] = useState()
+    const [showOrder, setShowOrderBookType] = useState(false)
 
     const identifyToken = (address) => {
         if (address === busd) {
@@ -114,46 +115,68 @@ export default function Orderbook() {
         console.log(table)
     }, [])
     return (
-        <div className='footer-table'>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Wallet ID</th>
-                        <th>Token Pair</th>
-                        <th>Base</th>
-                        <th>Quote</th>
-                        <th>TX</th>
-                    </tr>
-                </thead>
+        <>
+            <div
+                style={{
+                    marginLeft: 430
+                }}
+            >
+                <button onClick={() => setShowOrderBookType(true)} className="bn29 " id="">Buy Orders</button>
+                <button onClick={() => setShowOrderBookType(false)} style={{
+                    marginLeft: 50
+                }} className="bn29 " id="">Sell Orders</button>
+            </div>
+
+            <div className='footer-table'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Wallet ID</th>
+                            <th>Token Pair</th>
+                            <th>Base</th>
+                            <th>Quote</th>
+                            <th>TX</th>
+                        </tr>
+                    </thead>
 
 
-                {!table ? <>NO Trade yet</> : <tbody>
-                    {
-                        table.map((el, i) => {
-                            if (el.tx === "false") {
-                                console.log({ id: el.id, Oid: el.Oid, i })
-                                if (el.orderType === "sell") {
-                                    return <>
-                                        {
-                                            sell(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)
+
+                    {!table ? <>NO Trade yet</> : <tbody>
+                        {
+                            table.map((el, i) => {
+                                if (el.tx === "false") {
+                                    // console.log({ id: el.id, Oid: el.Oid, i })
+                                    if (showOrder === false) {
+                                        if (el.orderType === "sell") {
+                                            return <>
+                                                {
+                                                    sell(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)
+                                                }
+                                            </>
                                         }
-                                    </>
+                                    }
+                                    else {
+                                        if (el.orderType === "buy") {
+                                            return <>
+                                                {
+                                                    buy(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)
+                                                }
+                                            </>
+                                        }
+                                    }
                                 }
-                                else {
-                                    return <>{buy(el.creator, el.tokenA, el.tokenB, el.baseAmount, el.quoteAmount, el.Oid, el.id)}</>
-                                }
-                            }
 
-                        })
-                    }
+                            })
+                        }
 
-                </tbody>}
+                    </tbody>}
 
 
 
-            </table>
+                </table>
 
-        </div>
+            </div>
+        </>
     )
 }
 
