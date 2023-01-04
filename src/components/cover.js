@@ -203,7 +203,7 @@ function Cover() {
                                             <p>Connect you wallet now to immediately start buying or selling Crypto, hassle-free.</p>
                                             <div class="wallet-connect pt-2">
                                                 <a class="theme-btn no-meta-connect metamamsk-disconnect" href="javascript:void(0);" id="connect1">
-                                                    <img src="https://bybarter.exchange/assets/images/metamask.png" alt="" /><span> Connect To Wallet</span>
+                                                    <img src="#" alt="" /><span> Connect To Wallet</span>
                                                 </a>
                                             </div>
                                         </div>
@@ -286,7 +286,7 @@ function Cover() {
                                             <div class="testimonial-box">
                                                 <div class="user-box-img">
                                                     <div class="user-photo">
-                                                        <img src="https://bybarter.exchange/assets/images/testimonial-1.png" alt="profile-img" />
+                                                        <img src="#" alt="profile-img" />
                                                     </div>
                                                 </div>
                                                 <div class="testimonial-databox">
@@ -342,7 +342,7 @@ function Cover() {
                                                 </div>
                                                 <div class="footer-content">
                                                     <ul>
-                                                        <li><a href="https://bybarter.exchange/contact-us">Contact Us</a></li>
+                                                        <li><a href="p2pablc@ablc.io">Contact Us</a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -366,14 +366,19 @@ function Cover() {
                                                 </div>
                                                 <div class="footer-content">
                                                     <ul class="social-ico">
-                                                        <li><a target="_blank" href="https://t.me/+gNQem8PKQMtlMWFk"><i class="fab fa-telegram-plane"></i></a></li>
-                                                        <li><a target="_blank" href="https://twitter.com/Bybarterio"><i class="fab fa-twitter"></i></a></li>
-                                                        <li><a target="_blank" href="https://www.instagram.com/p/CYE3MLlKYlR/"><i class="fab fa-instagram"></i></a></li>
+                                                        <li><a target="_blank" href="https://t.me/ablctelegram"><i class="fab fa-telegram-plane"></i></a></li>
+                                                        <li><a target="_blank" href="https://twitter.com/ARABELLAablc"><i class="fab fa-twitter"></i></a></li>
+                                                        <li><a target="_blank" href="https://www.instagram.com/ablc_arabella_official/"><i class="fab fa-instagram"></i></a></li>
+                                                        <li><a target="_blank" href="https://www.instagram.com/ablc_arabella_official/"><i class="fab fa-facebook"></i></a></li>
+                                                        <li><a target="_blank" href=" https://youtube.com/channel/UCOXe-ZHFQrDZDjoime0mU1A"><i class="fab fa-youtube"></i></a></li>
+                                                        <li><a target="_blank" href="https://discord.gg/MfBpz63ehs"><i class="fab fa-discord"></i></a></li>
+                                                        {/* <li><a target="_blank" href="https://www.linkedin.com/in/arabella-ablc-05b451234/"><i class="fab fa-linkedIn"></i></a></li> */}
+                                                        <li><a target="_blank" href="https://www.reddit.com/user/ARABELLAablc"><i class="fab fa-reddit"></i></a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="email-box">
                                                     <ul class="clearfix">
-                                                        <li class="email"><a href="JavaScript:void(0)"><i class="mr-1 far fa-envelope"></i> <span class="__cf_email__" data-cfemail="c6a8a9ebb4a3b6aabf86a4bfa4a7b4b2a3b4e8a3bea5aea7a8a1a3">no-reply@ABLC.exchange</span></a></li>
+                                                        <li class="email"><a href="JavaScript:void(0)"><i class="mr-1 far fa-envelope"></i> <span class="__cf_email__" data-cfemail="c6a8a9ebb4a3b6aabf86a4bfa4a7b4b2a3b4e8a3bea5aea7a8a1a3">p2pablc@ablc.io</span></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
