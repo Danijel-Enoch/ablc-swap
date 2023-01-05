@@ -25,7 +25,7 @@ import Particle from "react-particles-js";
 import { BUDDY } from "ci-info";
 import "./bybarter/assets/css/site/site.min.css";
 import "./bybarter/assets/fontawesome/css/all.min.css";
-import { createPair } from '../sdk/p2p';
+import { createPair, ablcPrice } from '../sdk/p2p';
 export default function P2p() {
     const [tokeA, setTokenA] = useState("0x557a09f2a257e7ea0C9EdD45F4ABc1F5Eca05dfF");
     const [tokenB, setTokenB] = useState("0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56");
@@ -34,12 +34,18 @@ export default function P2p() {
     const [mode, setMode] = useState("buy");
 
     const Buy = async () => {
-        await createPair("buy", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
+        //buy 1 for 0.04
+        const cPrice = await ablcPrice()
+        const quoteAmountToGet = parseFloat(baseAmount) * cPrice
+        await createPair("buy", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmountToGet.toString())
             .then((res) => console.log({ res }))
             .catch((err) => console.log({ err }))
     }
     const Sell = async () => {
-        await createPair("sell", tokeA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString())
+        //buy 0.04 for 1
+        const cPrice = await ablcPrice()
+        const baseAmountToGet = parseFloat(baseAmount) / cPrice
+        await createPair("sell", tokenB.toString(), tokeA.toString(), quoteAmount.toString(), baseAmountToGet.toString())
             .then((res) => console.log({ res }))
             .catch((err) => console.log({ err }))
     }
@@ -65,21 +71,38 @@ export default function P2p() {
                             <p className="buytext">Base Token</p>
                             <p className="btcamount">1ABLC =0.04 USD</p>
                             <div className="selin">
-                                <input onChange={(e) => setBaseAmount(e.target.value)} className="secin" placeholder="Enter Quantity" />
-                                <select onChange={(e) => setTokenA(e.target.value)} name="" id="list2" >
+                                <input onChange={async (e) => {
+
+                                    const cPrice = await ablcPrice()
+                                    const bPrice = parseFloat(e.target.value) * cPrice;
+                                    if (parseFloat(e.target.value) < 1) {
+                                        alert("Minimum ablc to trade is 1")
+                                    } else {
+                                        setBaseAmount(e.target.value)
+                                        setQuoteAmount(bPrice)
+                                    }
+
+                                }} className="secin" placeholder="Enter Quantity" />
+                                <select onChange={(e) => {
+                                    setTokenA(e.target.value)
+                                }} name="" id="list2" >
                                     <option value="0x557a09f2a257e7ea0C9EdD45F4ABc1F5Eca05dfF">ABLC<img className="logodesign" src={logo} /></option>
                                 </select>
                             </div>
                             <p className="buytext">Quote Token</p>
                             <p className="btcamount usd">≅0 USD</p>
                             <div className="selin">
-                                <input onChange={(e) => setQuoteAmount(e.target.value)} className="secin" placeholder="Enter Quantity" />
+                                <input onChange={async (e) => {
+                                    setQuoteAmount(e.target.value)
+
+                                }} className="secin" value={quoteAmount} placeholder="Enter Quantity" />
                                 <select onChange={(e) => {
                                     setTokenB(e.target.value)
                                     console.log(e.target.value)
                                 }} name="" id="list2" >
                                     <option value="0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56">BUSD <img src={busd} /></option>
                                     <option value="0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c">BNB<img src={bnb} /></option>
+                                    <option value="0x55d398326f99059fF775485246999027B3197955">USDT<img src={bnb} /></option>
                                 </select>
                             </div>
                         </div>
