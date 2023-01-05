@@ -29,7 +29,7 @@ import Swapper from './Swapper';
 import P2p from './P2p';
 import Orderbook from './Orderbook';
 export default function Swap() {
-    const [showp2p, setShowp2p] = useState(false)
+    const [showp2p, setShowp2p] = useState(true)
     return (
         <div className="header-banner bg-theme-grad-s2" >
 
@@ -44,9 +44,9 @@ export default function Swap() {
 
                                     <div
                                         className='col-lg-6 col-xl-6 col-lg-6 col-xl-6 pdb mgx '>
-                                        <button onClick={() => setShowp2p(false)} className='swap-button'>
+                                        {/* <button onClick={() => setShowp2p(false)} className='swap-button'>
                                             Swap
-                                        </button>
+                                        </button> */}
 
                                         <button onClick={() => setShowp2p(true)} className='p2p-button'>
                                             P2P</button>
@@ -60,7 +60,7 @@ export default function Swap() {
                                 <div className="col-lg-6 col-xl-6 text-center text-lg-start">
                                     <div className="banner-caption tc-light">
                                         <div className="cpn-head mt-0">
-                                            <h1 className="title title-thin title-xl-2">Arabella (ABLC) <br></br> A Dex P2P Platform Where are you can Buy Arbella, BNB & BUSD Coins.</h1>
+                                            <h1 className="title title-thin title-xl-2">Arabella (ABLC) <br></br> A Dex P2P Platform Where are you can Buy Arabella, BNB & BUSD Coins.</h1>
                                             {/* <h1 className="title title-thin title-xl-2">A Dex P2P Platform Where are you can </h1>
                                                             <h1 className="title title-thin title-xl-2">Buy Arbella, BNB & BUSD Coins.</h1> */}
 
