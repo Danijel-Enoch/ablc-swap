@@ -91,7 +91,7 @@ export default function Terms() {
                                     <div class="page-title">
                                         <h2>Disclaimer</h2>
                                         {/* <!-- <div class="separator"></div> --> */}
-                                        <p>Millions have already successfully used ABLC and they have had a lot of nice things to say about us. Here's what our users think about ByBarter, in their own words.
+                                        <p>Millions have already successfully used ABLC and they have had a lot of nice things to say about us. Here's what our users think about ABLC, in their own words.
                                         </p>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@ export default function Terms() {
                                     <div class="page-title">
                                         <h2>Participant Warning</h2>
                                         {/* <!-- <div class="separator"></div> --> */}
-                                        <p>Participation in a cryptocurrencies and token offering carries high risks. It is highly speculative and before participating in any project about which information is given, prospective participants are strongly advised to seek appropriate professional advice; The information contained on this website including its Whitepaper has been prepared by or on behalf of the Company. ByBarter absolves itself of any liability thereof.
+                                        <p>Participation in a cryptocurrencies and token offering carries high risks. It is highly speculative and before participating in any project about which information is given, prospective participants are strongly advised to seek appropriate professional advice; The information contained on this website including its Whitepaper has been prepared by or on behalf of the Company. ABLC absolves itself of any liability thereof.
                                         </p>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@ export default function Terms() {
                                     <div class="page-title">
                                         <h2>Value Risks</h2>
                                         {/* <!-- <div class="separator"></div> --> */}
-                                        <p>Tokens issued by ByBarter may drop substantially in value, or may remain illiquid for long periods of time or indefinitely. ByBarter cannot guarantee an active secondary market for the exchange of tokens purchased in the token sale. Not all disclosures or statements are being made in this disclaimer section. Participants should review the token sale agreement in its entirety and seek the professional advice of legal counsel and investment professionals. ByBarter tokens may change in value based on a number of factors that are outside our control. There is no guarantee or expectation that ByBarter tokens will increase in value, provide a return, or have sufficient adoption and liquidity on exchanges. Owning these tokens does not constitute a share of equity or ownership in the company. The token economy is new and exciting. Regulatory circumstances may require that token mechanics be changed or altered. ByBarter tokens do not have any rights, uses, purpose, attributes, functionalities or features, express or implied, including, without limitation, any uses, purpose, attributes, functionalities or features on the ByBarter platform. Company does not guarantee and is not representing in any way that the ByBarter tokens have any rights, uses, purpose, attributes, functionalities or features. ByBarter tokens may have no value. The company reserves the right to refuse or cancel ByBarter token purchase requests at any time at its sole discretion.
+                                        <p>Tokens issued by ABLC may drop substantially in value, or may remain illiquid for long periods of time or indefinitely. ABLC cannot guarantee an active secondary market for the exchange of tokens purchased in the token sale. Not all disclosures or statements are being made in this disclaimer section. Participants should review the token sale agreement in its entirety and seek the professional advice of legal counsel and investment professionals. ABLC tokens may change in value based on a number of factors that are outside our control. There is no guarantee or expectation that ABLC tokens will increase in value, provide a return, or have sufficient adoption and liquidity on exchanges. Owning these tokens does not constitute a share of equity or ownership in the company. The token economy is new and exciting. Regulatory circumstances may require that token mechanics be changed or altered. ABLC tokens do not have any rights, uses, purpose, attributes, functionalities or features, express or implied, including, without limitation, any uses, purpose, attributes, functionalities or features on the ABLC platform. Company does not guarantee and is not representing in any way that the ABLC tokens have any rights, uses, purpose, attributes, functionalities or features. ABLC tokens may have no value. The company reserves the right to refuse or cancel ABLC token purchase requests at any time at its sole discretion.
                                         </p>
                                     </div>
                                 </div>
@@ -131,7 +131,7 @@ export default function Terms() {
                                     <div class="page-title">
                                         <h2>Not a Security</h2>
                                         {/* <!-- <div class="separator"></div> --> */}
-                                        <p>It is important to note that any tokens issued on ByBarter’s platform are not intended to be securities, and this website and documents found on it is not a prospectus, offering document or a solicitation for investment in a share or equity offering. Tokens issued on our platform as referenced in this document do not confer any type of ownership or debt within ByBarter’s ecosystem. Tokens currently trading or issued in the future are non-refundable. ByBarter will not guarantee any value, secondary market, or commitments to the value of such tokens. Buyer and owners shall participate in each economy at their sole risk.
+                                        <p>It is important to note that any tokens issued on ABLC’s platform are not intended to be securities, and this website and documents found on it is not a prospectus, offering document or a solicitation for investment in a share or equity offering. Tokens issued on our platform as referenced in this document do not confer any type of ownership or debt within ABLC’s ecosystem. Tokens currently trading or issued in the future are non-refundable. ABLC will not guarantee any value, secondary market, or commitments to the value of such tokens. Buyer and owners shall participate in each economy at their sole risk.
                                         </p>
                                     </div>
                                 </div>
@@ -248,7 +248,7 @@ export default function Terms() {
 //                             <div class="page-title">
 //                                 <h2>Disclaimer</h2>
 //                                 {/* <!-- <div class="separator"></div> --> */}
-//                                 <p>Millions have already successfully used ABLC and they have had a lot of nice things to say about us. Here's what our users think about ByBarter, in their own words.
+//                                 <p>Millions have already successfully used ABLC and they have had a lot of nice things to say about us. Here's what our users think about ABLC, in their own words.
 //                                 </p>
 //                             </div>
 //                         </div>
@@ -256,7 +256,7 @@ export default function Terms() {
 //                             <div class="page-title">
 //                                 <h2>Participant Warning</h2>
 //                                 {/* <!-- <div class="separator"></div> --> */}
-//                                 <p>Participation in a cryptocurrencies and token offering carries high risks. It is highly speculative and before participating in any project about which information is given, prospective participants are strongly advised to seek appropriate professional advice; The information contained on this website including its Whitepaper has been prepared by or on behalf of the Company. ByBarter absolves itself of any liability thereof.
+//                                 <p>Participation in a cryptocurrencies and token offering carries high risks. It is highly speculative and before participating in any project about which information is given, prospective participants are strongly advised to seek appropriate professional advice; The information contained on this website including its Whitepaper has been prepared by or on behalf of the Company. ABLC absolves itself of any liability thereof.
 //                                 </p>
 //                             </div>
 //                         </div>
@@ -280,7 +280,7 @@ export default function Terms() {
 //                             <div class="page-title">
 //                                 <h2>Value Risks</h2>
 //                                 {/* <!-- <div class="separator"></div> --> */}
-//                                 <p>Tokens issued by ByBarter may drop substantially in value, or may remain illiquid for long periods of time or indefinitely. ByBarter cannot guarantee an active secondary market for the exchange of tokens purchased in the token sale. Not all disclosures or statements are being made in this disclaimer section. Participants should review the token sale agreement in its entirety and seek the professional advice of legal counsel and investment professionals. ByBarter tokens may change in value based on a number of factors that are outside our control. There is no guarantee or expectation that ByBarter tokens will increase in value, provide a return, or have sufficient adoption and liquidity on exchanges. Owning these tokens does not constitute a share of equity or ownership in the company. The token economy is new and exciting. Regulatory circumstances may require that token mechanics be changed or altered. ByBarter tokens do not have any rights, uses, purpose, attributes, functionalities or features, express or implied, including, without limitation, any uses, purpose, attributes, functionalities or features on the ByBarter platform. Company does not guarantee and is not representing in any way that the ByBarter tokens have any rights, uses, purpose, attributes, functionalities or features. ByBarter tokens may have no value. The company reserves the right to refuse or cancel ByBarter token purchase requests at any time at its sole discretion.
+//                                 <p>Tokens issued by ABLC may drop substantially in value, or may remain illiquid for long periods of time or indefinitely. ABLC cannot guarantee an active secondary market for the exchange of tokens purchased in the token sale. Not all disclosures or statements are being made in this disclaimer section. Participants should review the token sale agreement in its entirety and seek the professional advice of legal counsel and investment professionals. ABLC tokens may change in value based on a number of factors that are outside our control. There is no guarantee or expectation that ABLC tokens will increase in value, provide a return, or have sufficient adoption and liquidity on exchanges. Owning these tokens does not constitute a share of equity or ownership in the company. The token economy is new and exciting. Regulatory circumstances may require that token mechanics be changed or altered. ABLC tokens do not have any rights, uses, purpose, attributes, functionalities or features, express or implied, including, without limitation, any uses, purpose, attributes, functionalities or features on the ABLC platform. Company does not guarantee and is not representing in any way that the ABLC tokens have any rights, uses, purpose, attributes, functionalities or features. ABLC tokens may have no value. The company reserves the right to refuse or cancel ABLC token purchase requests at any time at its sole discretion.
 //                                 </p>
 //                             </div>
 //                         </div>
@@ -288,7 +288,7 @@ export default function Terms() {
 //                             <div class="page-title">
 //                                 <h2>Not a Security</h2>
 //                                 {/* <!-- <div class="separator"></div> --> */}
-//                                 <p>It is important to note that any tokens issued on ByBarter’s platform are not intended to be securities, and this website and documents found on it is not a prospectus, offering document or a solicitation for investment in a share or equity offering. Tokens issued on our platform as referenced in this document do not confer any type of ownership or debt within ByBarter’s ecosystem. Tokens currently trading or issued in the future are non-refundable. ByBarter will not guarantee any value, secondary market, or commitments to the value of such tokens. Buyer and owners shall participate in each economy at their sole risk.
+//                                 <p>It is important to note that any tokens issued on ABLC’s platform are not intended to be securities, and this website and documents found on it is not a prospectus, offering document or a solicitation for investment in a share or equity offering. Tokens issued on our platform as referenced in this document do not confer any type of ownership or debt within ABLC’s ecosystem. Tokens currently trading or issued in the future are non-refundable. ABLC will not guarantee any value, secondary market, or commitments to the value of such tokens. Buyer and owners shall participate in each economy at their sole risk.
 //                                 </p>
 //                             </div>
 //                         </div>

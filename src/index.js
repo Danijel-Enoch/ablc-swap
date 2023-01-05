@@ -10,11 +10,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@rainbow-me/rainbowkit/styles.css';
 import Terms from './pages/Terms';
+import { connectorsForWallets } from '@rainbow-me/rainbowkit';
 
 import {
   getDefaultWallets,
   RainbowKitProvider,
 } from '@rainbow-me/rainbowkit';
+import {
+  injectedWallet,
+  rainbowWallet,
+  walletConnectWallet,
+  trustWallet,
+} from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { mainnet, polygon, optimism, arbitrum, bsc, bscTestnet } from 'wagmi/chains';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
@@ -28,10 +35,18 @@ const { chains, provider } = configureChains(
   ]
 );
 
-const { connectors } = getDefaultWallets({
-  appName: 'ABLC Swap',
-  chains
-});
+const connectors = connectorsForWallets([
+  {
+    groupName: 'Recommended',
+    wallets: [
+      injectedWallet({ chains }),
+      rainbowWallet({ chains }),
+      walletConnectWallet({ chains }),
+      trustWallet({ chains }),
+    ],
+  },
+]);
+
 
 const wagmiClient = createClient({
   autoConnect: true,
@@ -58,7 +73,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <WagmiConfig client={wagmiClient}>
-      <RainbowKitProvider chains={chains}>
+      <RainbowKitProvider showRecentTransactions={true} chains={chains}>
         <RouterProvider router={router} />
       </RainbowKitProvider>
     </WagmiConfig>
