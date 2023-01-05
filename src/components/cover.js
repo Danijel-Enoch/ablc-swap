@@ -83,11 +83,7 @@ function Cover() {
                                     </div>
 
                                     <div className="header-nav-toggle">
-                                        <a href="#" className="navbar-toggle" data-menu-toggle="header-menu">
-                                            <div className="toggle-line">
-                                                <span></span>
-                                            </div>
-                                        </a>
+                                        <li className="menu-item cnctwal"><ConnectButton /></li>
                                     </div>
 
                                     <div className="header-navbar header-navbar-s2">
