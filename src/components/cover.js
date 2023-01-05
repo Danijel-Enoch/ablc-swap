@@ -230,7 +230,7 @@ function Cover() {
                                             <div class="with-title">
                                                 <h3 class="theme-title">Buy Crypto online</h3>
                                             </div>
-                                            <p class="theme-content">Buy Crypto directly into your Metamask, Trustwallet and all major hot and cold wallets from the Bybarter platform. Exchange your fiat to crypto directly with other users online.
+                                            <p class="theme-content">Buy Crypto directly into your Metamask, Trustwallet and all major hot and cold wallets from theABLC platform. Exchange your fiat to crypto directly with other users online.
                                             </p>
                                         </div>
                                     </div>
