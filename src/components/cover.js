@@ -176,7 +176,7 @@ function Cover() {
                                             <div class="secure-title">
                                                 <h3 class="theme-title">Instant Exchange</h3>
                                             </div>
-                                            <p class="theme-content">ByBarter's unique platform enables Crypto Enthusiasts to exchange value independently from their self-custodial wallets.</p>
+                                            <p class="theme-content">ABLC unique platform enables Crypto Enthusiasts to exchange value independently from their self-custodial wallets.</p>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
@@ -275,7 +275,7 @@ function Cover() {
                                         <div class="page-title">
                                             <h2>Testimonials</h2>
                                             {/* <!-- <div class="separator"></div> --> */}
-                                            <p>Millions have already successfully used ABLC and they have had a lot of nice things to say about us. Here's what our users think about ByBarter, in their own words.
+                                            <p>Millions have already successfully used ABLC and they have had a lot of nice things to say about us. Here's what our users think about ABLC, in their own words.
                                             </p>
                                         </div>
                                     </div>
