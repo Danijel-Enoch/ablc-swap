@@ -328,8 +328,8 @@ function Cover() {
                                                 <div class="footer-content">
                                                     <ul>
                                                         {/* <!-- <li><a href="https://bybarter.exchange/about">About us</a></li> --> */}
-                                                        <li><a href="https://bybarter.exchange/fees">Fees</a></li>
-                                                        <li><a href="https://bybarter.exchange/terms-of-service" id="termms">Terms of Service</a></li>
+                                                        <li><a href="#">Fees</a></li>
+                                                        <li><a href="/terms-of-service" id="termms">Terms of Service</a></li>
                                                         {/* <!-- <li><a href="https://bybarter.exchange/privacy-policy">Privacy Policy</a></li> --> */}
                                                     </ul>
                                                 </div>

@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@rainbow-me/rainbowkit/styles.css';
+import Terms from './pages/Terms';
 
 import {
   getDefaultWallets,
@@ -32,6 +38,20 @@ const wagmiClient = createClient({
   connectors,
   provider
 })
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/create",
+    element: <div>Create</div>,
+  },
+  {
+    path: "/terms-of-service",
+    element: <Terms />,
+  },
+]);
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -39,8 +59,7 @@ root.render(
   <React.StrictMode>
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider chains={chains}>
-
-        <App />
+        <RouterProvider router={router} />
       </RainbowKitProvider>
     </WagmiConfig>
 
