@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import axios from 'axios';
 import { updateOrder } from "./apiSDK";
 
-const address = "0xC10f0646d7eFCB2af06c781f0A9dbd611193d187";
+const address = "0x3f31b1823a1E9b408AA6c83Db56BA434DF4212c9";
 
 
 //approve
@@ -13,7 +13,7 @@ async function approve(amount, token) {
         "function approve(address spender, uint256 amount) returns (bool)"
     ];
     const contract = new ethers.Contract(token, abi, signer);
-    const tx = await contract.functions.approve("0xC10f0646d7eFCB2af06c781f0A9dbd611193d187", amount);
+    const tx = await contract.functions.approve("0x3f31b1823a1E9b408AA6c83Db56BA434DF4212c9", amount);
 
     const receipt = await tx.wait();
     console.log("receipt", receipt);
@@ -27,7 +27,7 @@ async function CreateOrder(orderType, tokenA, tokenB, baseAmount, quoteAmount) {
     const abi = [
         "function CreateOrder(string _orderType, address _tokenA, address _tokenB, uint256 _baseAmount, uint256 _quoteAmount) payable"
     ];
-    const contract = new ethers.Contract("0xC10f0646d7eFCB2af06c781f0A9dbd611193d187", abi, signer);
+    const contract = new ethers.Contract("0x3f31b1823a1E9b408AA6c83Db56BA434DF4212c9", abi, signer);
     const tx = await contract.functions.CreateOrder(orderType.toString(), tokenA.toString(), tokenB.toString(), baseAmount.toString(), quoteAmount.toString());
 
     const receipt = await tx.wait();
@@ -85,7 +85,7 @@ export async function Exchange(wallet, id, tokenB, quoteAmount) {
         const abi = [
             "function Exchange(address _wallet, uint256 id)"
         ];
-        const contract = new ethers.Contract("0xC10f0646d7eFCB2af06c781f0A9dbd611193d187", abi, signer);
+        const contract = new ethers.Contract("0x3f31b1823a1E9b408AA6c83Db56BA434DF4212c9", abi, signer);
         const tx = await contract.functions.Exchange(wallet, id);
 
         const receipt = await tx.wait();
