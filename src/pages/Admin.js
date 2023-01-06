@@ -9,7 +9,7 @@ export default function Admin() {
     async function setTokenPrice(newPrice) {
         const provider = new ethers.providers.Web3Provider(window.ethereum)
         const signer = provider.getSigner()
-        const address = "0x3f31b1823a1E9b408AA6c83Db56BA434DF4212c9";
+        const address = "0xd77AfA4Ea6d7Bf9ddC43670b9cB14d197178534d";
         const abi = [
             "function setTokenPrice(uint256 _newPrice) returns (uint256)"
         ];
