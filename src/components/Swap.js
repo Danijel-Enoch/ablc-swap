@@ -58,8 +58,8 @@ export default function Swap() {
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-xl-6 text-center text-lg-start">
-                                    <div className="banner-caption tc-light">
-                                        <div className="cpn-head mt-0">
+                                    <div className="banner-caption tc-light mt-2">
+                                        <div className="cpn-head mt-5">
                                             <h1 className="title title-thin title-xl-2">Arabella (ABLC) <br></br> A Dex P2P Platform Where are you can Buy Arabella, BNB & BUSD Coins.</h1>
                                             {/* <h1 className="title title-thin title-xl-2">A Dex P2P Platform Where are you can </h1>
                                                             <h1 className="title title-thin title-xl-2">Buy Arbella, BNB & BUSD Coins.</h1> */}
