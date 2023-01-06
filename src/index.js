@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-
+import Admin from './pages/Admin';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -59,8 +59,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/create",
-    element: <div>Create</div>,
+    path: "/admin",
+    element: <Admin />,
   },
   {
     path: "/terms-of-service",
