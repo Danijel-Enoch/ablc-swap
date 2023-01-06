@@ -76,14 +76,14 @@ function Cover() {
 
                                     <div className="header-logo logo">
                                         <a href="./" className="logo-link">
-                                            <img className="logo-dark" id="logo" src={logo} srcset="images/logo2x.png 2x" alt="logo" />
-                                            <img className="logo-light" id="logo" src={logo}
-                                                srcset="images/logo-full-white2x.png 2x" alt="logo" />
+                                            <img className="logo-dark" id="logo" src="https://res.cloudinary.com/daniel23/image/upload/v1672989595/logo_ysnhlq.png" srcset="images/logo2x.png 2x" alt="logo" />
+                                            <img className="logo-light" id="logo" src="https://res.cloudinary.com/daniel23/image/upload/v1672989595/logo_ysnhlq.png"
+                                                alt="logo" />
                                         </a>
                                     </div>
 
                                     <div className="header-nav-toggle">
-                                        <li className="menu-item cnctwal"><ConnectButton /></li>
+                                        <ConnectButton />
                                     </div>
 
                                     <div className="header-navbar header-navbar-s2">
